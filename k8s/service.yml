@@ -4,10 +4,9 @@ metadata:
   name: node-app-service
   namespace: node-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: node-app
   ports:
     - port: 80
       targetPort: 8000
-      nodePort: 30003
